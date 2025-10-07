@@ -17,7 +17,7 @@ fn main() {
     loop {
         attempts += 1;
 
-        println!("{}", INSTRUCTIONS); // OR println!({INSTRUCTIONS});
+        println!("{}", INSTRUCTIONS); // OR println!("{INSTRUCTIONS}");
 
         let mut guess = String::new();
 
@@ -27,6 +27,8 @@ fn main() {
 
         // .parse() returns a Result enum (Ok or Err)
         let guess: u32 = match guess.trim().parse() {
+            // OR
+            /* let guess = match guess.trim().parse::<u32>() { */
             Ok(num) => num,
             Err(_) => {
                 // OR /* Err(_) => continue */
