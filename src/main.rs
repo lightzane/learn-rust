@@ -1,3 +1,6 @@
+#[cfg(test)]
+mod tests;
+
 fn main() {
     #[allow(unused_mut)]
     // 👆🏻 This attribute allows us to declare a mutable variable that we won't actually mutate, preventing a compiler warning.
@@ -87,15 +90,15 @@ fn main() {
     println!("New owner: {new_owner}"); // ✅ This line will work because new
 }
 
-fn takes_ownership(s: String) {
+pub fn takes_ownership(s: String) {
     println!("Inside takes_ownership: {s}");
 } // s goes out of scope here and the memory is freed
 
-fn makes_copy(x: i32) {
+pub fn makes_copy(x: i32) {
     println!("Inside makes_copy: {x}");
 } // x goes out of scope here, but nothing special happens because i32 is a Copy type
 
-fn gives_ownership() -> String {
+pub fn gives_ownership() -> String {
     let some_string = String::from("Hello from gives_ownership!");
     some_string // This moves ownership of the string to the caller
 }

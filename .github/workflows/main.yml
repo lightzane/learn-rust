@@ -1,0 +1,14 @@
+name: Rust Simple CI
+
+on: [push]
+
+jobs:
+  check-my-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Run my app
+        run: cargo run
+
+      - name: Run tests
+        run: cargo test
