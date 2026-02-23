@@ -4,6 +4,8 @@ Reference: <https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html>
 
 Learning _Ownership_ that it's a set of rules that govern how Rust program manages memory.
 
+Bonus advance learning about _Lifetime_. See ([lifetime.rs](src/lifetime.rs))
+
 ## How this project was created
 
 (Similar to `cargo new <package_name>`)

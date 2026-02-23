@@ -1,6 +1,9 @@
 #[cfg(test)]
 mod tests;
 
+mod bonus_lessons;
+use bonus_lessons::lifetime;
+
 fn main() {
     #[allow(unused_mut)]
     // 👆🏻 This attribute allows us to declare a mutable variable that we won't actually mutate, preventing a compiler warning.
@@ -88,6 +91,9 @@ fn main() {
 
     let new_owner = gives_ownership(); // new_owner now owns the string returned by gives_ownership
     println!("New owner: {new_owner}"); // ✅ This line will work because new
+
+    // Bonus Lesson: Lifetimes
+    // lifetime::run_demo(); // has compile-time errors
 }
 
 pub fn takes_ownership(s: String) {
