@@ -1,8 +1,8 @@
 #[cfg(test)]
 mod tests;
 
-mod bonus_lessons;
-use bonus_lessons::lifetime;
+// mod bonus_lessons;
+// use bonus_lessons::lifetime;
 
 fn main() {
     #[allow(unused_mut)]
