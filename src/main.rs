@@ -32,9 +32,15 @@ fn main() {
     // to store in the type itself
     #[allow(unused_variables)]
     let subject = AlwaysEqual;
+
+    // ! ⚠️ println! will not work for `User` since it does not implement the Debug trait
+    // * To enable, we can add `#[derive(Debug)]` above the struct definition
+    println!("{user1:?}"); // Just like JSON.stringify() in JavaScript
+    println!("{user1:#?}"); // Pretty print with newlines and indentation
 }
 
 // Struct with named fields
+#[derive(Debug)]
 struct User {
     active: bool,
     username: String,
