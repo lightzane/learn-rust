@@ -34,4 +34,20 @@ pub fn run() {
         }
         None => println!("y is None"),
     }
+
+    let dice_roll: u8 = 8;
+
+    match dice_roll {
+        // In JavaScript, this would be a `switch` statement
+        3 => println!("You rolled a 3!"), // arm 1
+        7 => println!("You rolled a 7!"), // arm 2
+
+        // Catch-all pattern that matches any value not matched by the previous arms
+        // `other` = arbitrary variable name.
+        // We can use `_` as variable name if we don't care about the value.
+        other => println!("You rolled something else: {}", other),
+        //
+        // This also works as a catch-all pattern:
+        // _ => () // do nothing for all other values
+    }
 }
